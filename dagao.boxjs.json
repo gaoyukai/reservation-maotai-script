@@ -1,14 +1,14 @@
 {
     "id": "fokit.app.sub",
-    "name": "FoKit 应用订阅",
-    "author": "@FoKit",
-    "icon": "https://avatars.githubusercontent.com/u/44187836",
-    "repo": "https://github.com/FoKit",
+    "name": "DaGao 应用订阅",
+    "author": "@DaGao",
+    "icon": "https://avatars.githubusercontent.com/u/31092014",
+    "repo": "https://github.com/gaoyukai/reservation-maotai-script",
     "apps": [
         {
             "id": "iMaoTai",
             "name": "i茅台",
-            "author": "@FoKit",
+            "author": "@DaGao",
             "script": "",
             "descs_html": [
                 ""
