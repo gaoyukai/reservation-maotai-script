@@ -5,14 +5,14 @@
 =================================================== ===================================================
 配置 (Quantumult X)
 [重写本地]
-^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/查询url script-request-headers https://raw.githubusercontent.com /FoKit/Scripts/main/scripts/get_maotai_token.js
+^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/查询url script-request-headers https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/get_maotai_token.js
 
 [中间人]
 主机名 = app.moutai519.com.cn
 =================================================== ===================================================
 配置（浪涌）
 [脚本]
-i茅台Token = type=http-request,pattern=^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query,需要-正文=0，最大大小=0，超时=1000，脚本路径=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_maotai_token.js，script-update-interval=0
+i茅台Token = type=http-request,pattern=^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query,需要-正文=0，最大大小=0，超时=1000，脚本路径=https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/get_maotai_token.js，script-update-interval=0
 
 [中间人]
 主机名 = %APPEND% app.moutai519.com.cn

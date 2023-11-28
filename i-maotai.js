@@ -14,9 +14,9 @@
 
 --------------- BoxJS & 重写模块 --------------
 
-https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
-https://raw.githubusercontent.com/FoKit/Scripts/main/rewrite/get_maotai_token.conf
-https://raw.githubusercontent.com/FoKit/Scripts/main/rewrite/get_maotai_token.sgmodule
+https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/box.js.json
+https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/get_maotai_token.conf
+https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/get_maotai_token.sgmodule
 
 ------------------ Surge 配置 -----------------
 
@@ -24,9 +24,9 @@ https://raw.githubusercontent.com/FoKit/Scripts/main/rewrite/get_maotai_token.sg
 hostname = %APPEND% app.moutai519.com.cn
 
 [Script]
-茅台Token = type=http-request,pattern=^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js
+茅台Token = type=http-request,pattern=^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js
 
-i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js,script-update-interval=0
+i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js,script-update-interval=0
 
 ------------------ Loon 配置 ------------------
 
@@ -34,9 +34,9 @@ i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githu
 hostname = app.moutai519.com.cn
 
 [Script]
-http-request ^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query tag=茅台Token, script-path=https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js,requires-body=0
+http-request ^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query tag=茅台Token, script-path=https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js,requires-body=0
 
-cron "17 9 * * *" script-path=https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js,tag = i 茅台,enable=true
+cron "17 9 * * *" script-path=https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js,tag = i 茅台,enable=true
 
 -------------- Quantumult X 配置 --------------
 
@@ -44,10 +44,10 @@ cron "17 9 * * *" script-path=https://raw.githubusercontent.com/gaoyukai/my_scri
 hostname = app.moutai519.com.cn
 
 [rewrite_local]
-^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query url script-request-header https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js
+^https:\/\/app\.moutai519\.com\.cn\/xhr\/front\/mall\/message\/unRead\/query url script-request-header https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js
 
 [task_local]
-17 9 * * * https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js, tag=i 茅台, enabled=true
+17 9 * * * https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js, tag=i 茅台, enabled=true
 
 ------------------ Stash 配置 -----------------
 
@@ -68,7 +68,7 @@ http:
 
 script-providers:
   i 茅台:
-    url: https://raw.githubusercontent.com/gaoyukai/my_script/main/i-maotai.js
+    url: https://raw.githubusercontent.com/gaoyukai/reservation-maotai-script/main/i-maotai.js
     interval: 86400
 
 */
